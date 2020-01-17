@@ -1,0 +1,18 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a multi-line script
+      run: |
+        set -e
+        apt-get update
+        apt-get install docker-io -y
+        docker build -t kj4ips/ctfscoreboard
+        
