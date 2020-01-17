@@ -9,18 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Display some info
-      run: |
-        id
-        hostname
-        uptime
-        pstree
-        sudo -l
         
-    - name: Install build deps
+    - name: build container
       run: |
-        set -e
-        apt-get update
-        apt-get install docker-io -y
-        docker build -t kj4ips/ctfscoreboard
+        docker build -t kj4ips/ctfscoreboard .
         
