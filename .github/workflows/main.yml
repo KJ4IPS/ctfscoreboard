@@ -9,7 +9,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a multi-line script
+    - name: Display some info
+      run: |
+        id
+        hostname
+        uptime
+        pstree
+        sudo -l
+        
+    - name: Install build deps
       run: |
         set -e
         apt-get update
