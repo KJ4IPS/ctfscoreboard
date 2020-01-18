@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     nginx \
     python \
     python-pip \
+    python-dev \
     supervisor \
     uwsgi \
     uwsgi-plugin-python \
