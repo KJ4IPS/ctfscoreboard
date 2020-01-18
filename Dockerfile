@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     libmemcached-dev \
     libpython-dev \
+    zlib1g-dev \
+    libpcre3-dev \
     supervisor \
     uwsgi \
     uwsgi-plugin-python \
