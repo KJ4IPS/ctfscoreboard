@@ -11,11 +11,11 @@ jobs:
         
     - name: build container
       run: 'docker build -t kj4ips/ctfscoreboard .'
-    - name: login to github dicker registry
+    - name: login to github docker registry
       env:
         PACKAGE_REGISTRY_PASSWORD: "${{ secrets.PACKAGE_REGISTRY_PASSWORD }}"
       run: 'docker login --username KJ4IPS --password-stdin docker.pkg.github.com <<<"$PACKAGE_REGISTRY_PASSWORD"'
     - name: push to github registry
       run: |
-        docker tag kj4ips/ctfscoreboard docker.pkg.github.com/KJ4IPS/ctfscoreboard/scoreboard:latest
-        docker push docker.pkg.github.com/KJ4IPS/ctfscoreboard/scoreboard:latest
+        docker tag kj4ips/ctfscoreboard docker.pkg.github.com/kj4ips/ctfscoreboard/scoreboard:latest
+        docker push docker.pkg.github.com/kj4ips/ctfscoreboard/scoreboard:latest
